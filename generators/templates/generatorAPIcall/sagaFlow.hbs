@@ -1,0 +1,17 @@
+function* {{ camelCase requestName }}Flow({ payload }) {
+  try {
+    const response = yield call(request, '{{ APIPath }}', payload, METHOD.{{ keyOfMethod requestMethod }});
+
+    if (response.status === STATUS_CODE.SUCCESS) {
+      const { type } = {{ camelCase requestName }}Success;
+      yield put({
+        type,
+        payload: response.data,
+      });
+    } else {
+      yield put({ type: {{ camelCase requestName }}Fail.type });
+    }
+  } catch (error) {
+    yield put({ type: setErrorMessages.type, payload: [error] });
+  }
+}

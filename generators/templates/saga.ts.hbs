@@ -1,0 +1,34 @@
+import { STATUS_CODE } from 'kaizen-risk-assessment-tool/src/constants/common';
+import {
+  call,
+  put,
+  delay,
+  takeEvery,
+} from 'redux-saga/effects';
+import request from '../../request';
+import { METHOD } from '../../request/constants';
+import { {{ camelCase requestName }}Request, {{ camelCase requestName }}Success, {{ camelCase requestName }}Fail } from './reducer';
+
+function* {{ camelCase requestName }}Flow({ payload }) {
+  try {
+    const response = yield call(request, '{{ apiPath }}', payload, METHOD.{{ keyOfMethod requestMethod }});
+    if (response.status === STATUS_CODE.SUCCESS) {
+      yield delay(1000);
+      const { type } = {{ camelCase requestName }}Success;
+      yield put({
+        type,
+        payload: response.data,
+      });
+    } else {
+      yield put({ type: {{ camelCase requestName }}Fail.type });
+    }
+  } catch (error) {
+    yield put({ type: {{ camelCase requestName }}Fail.type });
+  }
+}
+
+function* {{ camelCase name }}Watcher() {
+  yield takeEvery({{ camelCase requestName }}Request, {{ camelCase requestName }}Flow);
+}
+
+export default {{ camelCase name }}Watcher;

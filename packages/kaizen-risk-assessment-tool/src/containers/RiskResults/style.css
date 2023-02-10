@@ -1,0 +1,468 @@
+@media print {
+  html,
+  body {
+    height: initial !important;
+    overflow: initial !important;
+    -webkit-print-color-adjust: exact;
+  }
+  .results_indicators {
+    display: block;
+    page-break-before: always;
+  }
+  .result_button {
+    visibility: hidden;
+  }
+
+  .results_key_risk_name {
+    width: 200px !important;
+    max-width: 200px !important;
+    display: flex !important;
+    padding: 10px 0;
+  }
+
+  .results_key_risk_option_description {
+    display: flex !important;
+    padding: 10px 0;
+  }
+}
+
+@page {
+  size: 210mm 297mm;
+  margin: 10mm;
+}
+
+.kaizen_blue_text--fw600 {
+  color: #002678;
+  font-weight: 600;
+}
+
+.results {
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.result_button {
+  margin-left: 10px !important;
+  padding: 6px 16px !important ;
+}
+
+.result_title_box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.risk_results_detail_paper {
+  padding: 20px;
+}
+
+.results_back {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #757575;
+}
+
+.results_back_icon {
+  margin-right: 5px;
+  font-weight: bold;
+  color: #002678;
+}
+
+.results_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results_header_button button {
+  margin-left: 10px;
+  background-color: transparent;
+  color: #2196f3;
+}
+
+.results_header_button button:hover {
+  background-color: transparent;
+}
+
+.results_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #002678;
+}
+
+.risk_title_left {
+  margin: 10px 0 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #002678;
+  display: flex;
+}
+
+.risk_title_right {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  width: fit-content;
+  overflow-wrap: anywhere;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 75px;
+  text-align: end;
+}
+
+.risk_warning {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ea3b3b;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.risk_value {
+  letter-spacing: 1px;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.risk_value_high {
+  color: #ea3b3b;
+}
+
+.risk_value_medium {
+  color: #ffa400;
+}
+
+.risk_value_low {
+  color: #44c662;
+}
+
+.results_companyName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: #002678;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e7ebf2;
+}
+
+.results_show_riskScore_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #80869b;
+  margin: 15px 0;
+}
+
+.results_show_riskScore_title span {
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 0 5px;
+}
+
+.arrow_up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #002678;
+  margin: 30px auto 5px auto;
+}
+
+.riskScore {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #002678;
+}
+
+.results_show_riskScore_subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 20px;
+}
+
+.results_risk_assessment_title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  margin: 20px 0;
+}
+
+.results_risk_assessment {
+  margin: 20px 0 40px 0;
+  padding: 30px;
+  border-radius: 15px;
+  background: #f4f4f4;
+}
+
+.results_assessment {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  color: #000000;
+}
+
+.results_assessment::first-letter {
+  text-transform: uppercase;
+}
+
+.results_details {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.results_details_title {
+  font-size: 20px;
+}
+
+.results_details_content {
+  flex: 0 0 33.3%;
+  margin: 20px 0;
+}
+
+.results_details_content_box_name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: #787878;
+}
+
+.results_details_content_box_value {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #002678;
+  text-transform: capitalize;
+  word-break: break-word;
+}
+
+.results_indicators_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  color: #002678;
+  margin-bottom: 30px;
+}
+
+.results_indicators {
+  display: flex;
+  flex-direction: column;
+}
+
+.key_risk_indicators_action {
+  display: flex;
+  justify-content: flex-end;
+  margin: 50px 0 20px 0;
+}
+
+.results_key_special_selection {
+  display: flex;
+  padding: 8px 20px;
+  margin-right: 10px;
+  border: 1px solid #ea3b3b;
+  border-radius: 4px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.results_question_category_name {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  color: #ea3b3b;
+}
+
+.results_question_category_warning_icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+}
+
+.results_key_risk {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 45px;
+}
+
+.results_key_risk:nth-of-type(even) {
+  background-color: #f4f4f4;
+}
+
+.results_key_risk_name {
+  width: 400px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #787878;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.results_key_risk_options {
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 20px;
+  letter-spacing: 0.15px;
+  width: 100%;
+  color: #002678;
+}
+
+.results_key_risk_option_description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.results_key_risk_option {
+  width: fit-content;
+}
+
+.results_key_risk_rating {
+  width: 100px;
+}
+
+.results_low {
+  display: inline-block !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #ffffff;
+  display: inline;
+  min-width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #44c662;
+}
+
+.results_medium {
+  display: inline-block !important;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #ffffff;
+  display: inline;
+  min-width: 80px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #ffa400;
+}
+
+.results_false {
+  display: inline-block !important;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #ffffff;
+  display: inline;
+  text-align: center;
+  min-width: 80px;
+  border-radius: 4px;
+}
+
+.results_na {
+  display: inline-block !important;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  display: inline;
+  text-align: center;
+  min-width: 80px;
+  border-radius: 4px;
+  background-color: #80869b;
+  color: #ffffff;
+}
+
+.results_high {
+  display: inline-block !important;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  display: inline;
+  text-align: center;
+  min-width: 80px;
+  border-radius: 4px;
+  background-color: #ea3b3b;
+  color: #ffffff;
+}
+
+.results_reviewer_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: #80869b;
+  padding-bottom: 10px;
+}

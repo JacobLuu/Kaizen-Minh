@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  web:
+    container_name: kaizen-risk-assessment-tool
+    build: .
+    environment:
+      - REACT_APP_ADMIN_URL=http://127.0.0.1:5000/api/v1/
+    ports: 
+      - 3000:80
+    restart: always
+    logging:
+      driver: "json-file"

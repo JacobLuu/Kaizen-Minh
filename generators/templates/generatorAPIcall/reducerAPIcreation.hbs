@@ -1,0 +1,11 @@
+{{#if requestName}}
+    {{ camelCase requestName }}Request: (state, action) => {
+      if (action) state.{{ camelCase requestName }}Status = REQUEST_STATUS.REQUESTING;
+    },
+    {{ camelCase requestName }}Success: (state, action) => {
+      if (action) state.{{ camelCase requestName }}Status = REQUEST_STATUS.SUCCESS;
+    },
+    {{ camelCase requestName }}Fail: (state, action) => {
+      if (action) state.{{ camelCase requestName }}Status = REQUEST_STATUS.ERROR;
+    },
+{{/if}}

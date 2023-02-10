@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - node -v
+      - npm run build:admin
+  post_build:
+    commands:
+      - aws cloudfront create-invalidation --distribution-id=${DISTRIBUTION_ID} --paths '/*'
+artifacts:
+  files:
+    - '**/*'
+  base-directory: ./packages/admin/build
